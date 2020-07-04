@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <conio.h>
-#include <stdio.h>
 
 #define QUANTIDADE_DE_CLIENTES 1
 
@@ -34,7 +33,7 @@ void menu(){
 
         printf("MENU \n\n");
         printf("1- Cadastrar \n");
-        printf("2- Operações \n");
+        printf("2- OperaÃ§Ãµes \n");
         printf("3- Sair \n");
 
         scanf("%d", &opcoes);
@@ -52,7 +51,7 @@ void menu(){
         exit(0);
     default:
         system("CLS");
-        printf("Opção inválida! Digite novamente\n\n");
+        printf("OpÃ§Ã£o invÃ¡lida! Digite novamente\n\n");
         menu();
         }
 
@@ -91,8 +90,8 @@ int opcoes;
 int num_conta;
 float valor;
 
-    printf("\nMENU OPERAÇÕES\n");
-    printf("\nInforme a operação:\n");
+    printf("\nMENU OPERAÃ‡Ã•ES\n");
+    printf("\nInforme a operaÃ§Ã£o:\n");
     printf("\n1-Saque\n");
     printf("\n2-Deposito\n");
     printf("\n3-Sair \n");
@@ -102,14 +101,14 @@ float valor;
 
     case 1:
 
-      printf("\nInforme o número da conta:\n ");
+      printf("\nInforme o nÃºmero da conta:\n ");
       scanf("%d", &num_conta);
 
       printf("\nInforme o valor para saque:\n ");
       scanf("%f",&valor);
 
       while(valor<=0){
-        printf("\nValor Inválido! Insira um valor positivo!:\n ");
+        printf("\nValor InvÃ¡lido! Insira um valor positivo!:\n ");
         scanf("%f",&valor);
       }
 
@@ -123,18 +122,18 @@ float valor;
                     if (clientes[j].cpf == contas[i].cpf_do_cliente)
                     printf("\n Saldo atual: %1.2f\n",contas[i].saldo);
                 }
-                printf("\nPressione qualquer tecla para voltar ao menu de Operações!");
+                printf("\nPressione qualquer tecla para voltar ao menu de OperaÃ§Ãµes!");
                 getch();
                 system("CLS");
                 opr();
             }else{
                 system("CLS");
-                printf("Não foi possivel completar a transação! Saldo Insuficiente.\n");
+                printf("NÃ£o foi possivel completar a transaÃ§Ã£o! Saldo Insuficiente.\n");
                 opr();
             }
         }else{
             system("CLS");
-            printf("Conta inválida! Repita a operação!\n");
+            printf("Conta invÃ¡lida! Repita a operaÃ§Ã£o!\n");
             opr();
         }
 
@@ -142,14 +141,14 @@ float valor;
         break;
 
     case 2:
-      printf("\nInforme o número da conta:\n ");
+      printf("\nInforme o nÃºmero da conta:\n ");
       scanf("%d", &num_conta);
 
-      printf("\nInforme o valor para depósito:\n ");
+      printf("\nInforme o valor para depÃ³sito:\n ");
       scanf("%f",&valor);
 
     while(valor<=0){
-        printf("\nValor Inválido! Insira um valor positivo!:\n ");
+        printf("\nValor InvÃ¡lido! Insira um valor positivo!:\n ");
         scanf("%f",&valor);
       }
 
@@ -163,7 +162,7 @@ float valor;
                 clientes[j].nome, contas[i].saldo);
             }
         }
-            printf("\nPressione qualquer tecla para voltar ao menu de Operações!");
+            printf("\nPressione qualquer tecla para voltar ao menu de OperaÃ§Ãµes!");
             getch();
             system("CLS");
             opr();
@@ -174,7 +173,7 @@ float valor;
         exit(0);
     default:
         system("CLS");
-        printf("Opção inválida!Digite novamente\n");
+        printf("OpÃ§Ã£o invÃ¡lida!Digite novamente\n");
         opr();
     }
 }
